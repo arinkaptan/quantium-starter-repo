@@ -9,6 +9,7 @@ df = df.sort_values("date")
 df_grouped = df.groupby("date")["sales"].sum().reset_index()
 
 app = dash.Dash(__name__)
+server = app.server 
 
 app.layout = html.Div(style={
     "fontFamily": "Arial, sans-serif",
